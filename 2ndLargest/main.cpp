@@ -1,7 +1,5 @@
 #include <iostream>
 #include <math.h>
-#include <vector>
-#include <memory>
 
 //You are given as input an unsorted array of n distinct numbers, where n is a power of 2.
 //Give an algorithm that identifies the second-largest number in the array, and that uses
@@ -13,8 +11,8 @@ int secondLargest(int *, int);
 
 int main() {
     int arr[16] = {122, 5 , 88, 3, 7, 5, 8, 99, 111, 11, 999, 43, 55, 66, 77, 100};
-    int max = secondLargest(arr, 16);
-    std::cout << max;
+    int secondLargestInteger = secondLargest(arr, 16);
+    std::cout << secondLargestInteger;
     return 0;
 }
 
@@ -42,7 +40,7 @@ int secondLargest(int *arr, int numElements){       //log2(n)  run time
 int* findLargest(int arr[], int start, int end, int iterations){    // n - 1 run time
 
     if(end-start <= 2){
-        //Store length in 0 and highest element in 1
+        //Store highest element in 1
         int* compare = new int[iterations] ;
 
         if(arr[start] > arr[end-1]) {
@@ -65,7 +63,6 @@ int* findLargest(int arr[], int start, int end, int iterations){    // n - 1 run
             delete[] B;
             return A;
         }else{
-
             B[(int)std::log2(end-start)]=A[0];
             delete[] A;
             return B;
