@@ -1,0 +1,10 @@
+QuickSort:
+
+Download the following text file (right click and select "Save As..."): QuickSort.txt
+
+The file contains all of the integers between 1 and 10,000 (inclusive, with no repeats) in unsorted order. The integer in the
+row of the file gives you the entry of an input array.
+
+Your task is to compute the total number of comparisons used to sort the given input file by QuickSort. As you know, the number of comparisons depends on which elements are chosen as pivots, so we'll ask you to explore three different pivoting rules.
+
+LocalMin: 2. You are given an n by n grid of distinct numbers. A number is a local minimum if it is smaller than all of its neighbors. (A neighbor of a number is one immediately above, below, to the left, or the right. Most numbers have four neighbors; numbers on the side have three; the four corners have two.) Use the divide-and-conquer algorithm design paradigm to compute a local minimum with only O(n) comparisons between pairs of numbers. (Note: since there are numbers in the input, you cannot afford to look at all of them. Hint: Think about what types of recurrences would give you the desired upper bound.)
